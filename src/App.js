@@ -101,7 +101,10 @@ export default function Jogo() {
   const xIsNext = MovimentoAtual % 2 === 0;
   //
   function ManipuladorJogo(proximosQuadrados) {
-    const ProximoHistorico = [...historico.slice(0, MovimentoAtual + 1), proximosQuadrados];
+    const ProximoHistorico = [
+      ...historico.slice(0, MovimentoAtual + 1),
+      proximosQuadrados,
+    ];
     setHistorico(ProximoHistorico);
     setMovimentoAtual(ProximoHistorico.length - 1);
   }
